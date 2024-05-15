@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace GimnacioClient
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            SetContentByRole();
+        }
+
+        private void SetContentByRole()
+        {
+            switch (UserSingleton.Instance.UserType)
+            {
+                case "Admin":
+                    btnRegisterPayment.Visibility = Visibility.Visible;
+                    break;
+
+                case "Entrenador":
+                    btnRegisterClass.Visibility = Visibility.Visible;
+                    break;
+
+                case "Miembro":
+                    btnReserveClass.Visibility = Visibility.Visible;
+                    break;
+            }
+        }
+
+        private void Btn_Register_Class_Click(object sender, RoutedEventArgs e)
+        {
+            Window classWindow = new GUI_Class();
+            classWindow.Show();
+            this.Close();
+        }
+    }
+}
