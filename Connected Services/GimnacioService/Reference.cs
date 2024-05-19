@@ -35,6 +35,9 @@ namespace GimnacioClient.GimnacioService {
         private System.DateTime DateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.TimeSpan TimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int TrainerIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -98,6 +101,19 @@ namespace GimnacioClient.GimnacioService {
                 if ((this.DateField.Equals(value) != true)) {
                     this.DateField = value;
                     this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.TimeSpan Time {
+            get {
+                return this.TimeField;
+            }
+            set {
+                if ((this.TimeField.Equals(value) != true)) {
+                    this.TimeField = value;
+                    this.RaisePropertyChanged("Time");
                 }
             }
         }
@@ -320,6 +336,12 @@ namespace GimnacioClient.GimnacioService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClassManager/RegisterClass", ReplyAction="http://tempuri.org/IClassManager/RegisterClassResponse")]
         System.Threading.Tasks.Task<int> RegisterClassAsync(GimnacioClient.GimnacioService.Class newClass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClassManager/ValidateDateIsAvailable", ReplyAction="http://tempuri.org/IClassManager/ValidateDateIsAvailableResponse")]
+        int ValidateDateIsAvailable(System.DateTime classDateTime);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClassManager/ValidateDateIsAvailable", ReplyAction="http://tempuri.org/IClassManager/ValidateDateIsAvailableResponse")]
+        System.Threading.Tasks.Task<int> ValidateDateIsAvailableAsync(System.DateTime classDateTime);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -355,6 +377,14 @@ namespace GimnacioClient.GimnacioService {
         
         public System.Threading.Tasks.Task<int> RegisterClassAsync(GimnacioClient.GimnacioService.Class newClass) {
             return base.Channel.RegisterClassAsync(newClass);
+        }
+        
+        public int ValidateDateIsAvailable(System.DateTime classDateTime) {
+            return base.Channel.ValidateDateIsAvailable(classDateTime);
+        }
+        
+        public System.Threading.Tasks.Task<int> ValidateDateIsAvailableAsync(System.DateTime classDateTime) {
+            return base.Channel.ValidateDateIsAvailableAsync(classDateTime);
         }
     }
     
