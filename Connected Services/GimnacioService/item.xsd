@@ -11,6 +11,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Class" nillable="true" type="tns:Class" />
+  <xs:complexType name="ArrayOfClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Class" nillable="true" type="tns:Class" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClass" nillable="true" type="tns:ArrayOfClass" />
   <xs:complexType name="User">
     <xs:sequence>
       <xs:element minOccurs="0" name="Curp" nillable="true" type="xs:string" />

@@ -57,8 +57,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CU-BookClass\View\ClassDetailsWindow.xaml.cs">
+      <DependentUpon>ClassDetailsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CU-BookClass\View\ClassListWindow.xaml.cs">
+      <DependentUpon>ClassListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CU-BookClass\View\Controls\ClassControl.xaml.cs">
+      <DependentUpon>ClassControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserSingleton.cs" />
     <Compile Include="Utility.cs" />
+    <Page Include="CU-BookClass\View\ClassDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CU-BookClass\View\ClassListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CU-BookClass\View\Controls\ClassControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI_Class.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -109,6 +130,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Connected Services\GimnacioService\GimnacioClient.GimnacioService.Class.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GimnacioService\GimnacioClient.GimnacioService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
