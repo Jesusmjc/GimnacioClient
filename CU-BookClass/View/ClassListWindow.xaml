@@ -1,0 +1,31 @@
+﻿<Window x:Class="GimnacioClient.CU_BookClass.View.ClassListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GimnacioClient.CU_BookClass.View"
+        xmlns:Controls="clr-namespace:GimnacioClient.CU_BookClass.View.Controls"
+        mc:Ignorable="d"
+        Title="ClassListWindow" Height="550" Width="900"
+        Background="#E1E1E1">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Clases disponibles" Grid.Column="1" FontSize="18" FontWeight="SemiBold"/>
+            <Border Background="#FF9C4700" Height="2" VerticalAlignment="Center" Grid.Column="2" Margin="15 0 0 0" CornerRadius="2"/>
+        </Grid>
+
+        <StackPanel Name="Classes_StackPanel" Grid.Row="2" Margin="0 15 0 0">
+        </StackPanel>
+    </Grid>
+</Window>

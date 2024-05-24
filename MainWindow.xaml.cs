@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GimnacioClient.CU_BookClass.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,6 +48,13 @@ namespace GimnacioClient
         private void Btn_Register_Class_Click(object sender, RoutedEventArgs e)
         {
             Window classWindow = new GUI_Class();
+            classWindow.Show();
+            this.Close();
+        }
+
+        private void Btn_Book_Class_Click(object sender, RoutedEventArgs e)
+        {
+            Window classWindow = new ClassListWindow();
             classWindow.Show();
             this.Close();
         }

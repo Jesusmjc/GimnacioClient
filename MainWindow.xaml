@@ -9,7 +9,7 @@
     <Grid>
         <Image Margin="487,100,487,0" Source="/Resources/Image1.png" Stretch="Fill" Height="217" VerticalAlignment="Top"/>
         <Button x:Name="btnRegisterClass" Content="Registrar Clase" HorizontalAlignment="Center" Margin="0,411,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Visibility="Hidden" Click="Btn_Register_Class_Click"/>
-        <Button x:Name="btnReserveClass" Content="Reservar Clase" HorizontalAlignment="Center" Margin="0,411,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Visibility="Hidden"/>
+        <Button x:Name="btnReserveClass" Content="Reservar Clase" HorizontalAlignment="Center" Margin="0,411,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Visibility="Hidden" Click="Btn_Book_Class_Click"/>
         <Button x:Name="btnRegisterPayment" Content="Registrar Pago" HorizontalAlignment="Center" Margin="0,411,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Visibility="Hidden"/>
     </Grid>
 </Window>

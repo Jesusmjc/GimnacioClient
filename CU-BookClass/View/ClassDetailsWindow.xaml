@@ -1,0 +1,26 @@
+﻿<Window x:Class="GimnacioClient.CU_BookClass.View.ClassDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GimnacioClient.CU_BookClass.View"
+        mc:Ignorable="d"
+        Title="ClassDetailsWindow" Height="450" Width="500">
+    <Grid Margin="15">
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="Clase" FontSize="20" FontWeight="Black" FontFamily="Yu Gothic" HorizontalAlignment="Center"/>
+            <TextBlock Name="Title_TextBlock" Text="Titulo de la clase" FontSize="18" FontWeight="Bold" FontFamily="Yu Gothic" HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Fecha" FontSize="18" FontWeight="Black" FontFamily="Yu Gothic" HorizontalAlignment="Center" Margin="0 15 0 0"/>
+            <TextBlock Name="Date_TextBlock" Text="10-02-2002" FontSize="14" FontWeight="Normal" FontFamily="Yu Gothic" HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Horario" FontSize="18" FontWeight="Black" FontFamily="Yu Gothic" HorizontalAlignment="Center" Margin="0 15 0 0"/>
+            <TextBlock Name="Hour_TextBlock" Text="13:00" FontSize="14" FontWeight="Normal" FontFamily="Yu Gothic" HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Instructor" FontSize="18" FontWeight="Black" FontFamily="Yu Gothic" HorizontalAlignment="Center" Margin="0 15 0 0"/>
+            <TextBlock Name="Instructor_TextBlock" Text="Nombre del instructor" FontSize="14" FontWeight="Normal" FontFamily="Yu Gothic" HorizontalAlignment="Center"/>
+
+            <Button Content="Reservar" Height="35" Margin="0 35 0 0" FontFamily="Yu Gothic" Click="SaveButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
