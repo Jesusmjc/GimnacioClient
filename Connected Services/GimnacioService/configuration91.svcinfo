@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="X6bUDKxiEmqbbdijEDSKSYNZsSnc0ycJIWV04bNmriU=">
+<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="fTHR9LivFc7n4lN6x/VoiUZD/rtQEtUHeWaDtkWm5JI=">
+
   <bindingConfigurations>
     <bindingConfiguration bindingType="netTcpBinding" name="NetTcpBinding_IClassManager">
       <properties>
@@ -239,10 +240,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="NetTcpBinding_IClassManager" contract="GimnacioService.IClassManager" bindingType="netTcpBinding" address="net.tcp://localhost:8083/CrazyEightsServicio" bindingConfiguration="NetTcpBinding_IClassManager">
+    <endpoint name="NetTcpBinding_IClassManager" contract="GimnacioService.IClassManager" bindingType="netTcpBinding" address="net.tcp://localhost:8083/GimnacioServicio" bindingConfiguration="NetTcpBinding_IClassManager">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://localhost:8083/CrazyEightsServicio</serializedValue>
+          <serializedValue>net.tcp://localhost:8083/GimnacioServicio</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -269,7 +270,10 @@
           <serializedValue>System.ServiceModel.Configuration.UserPrincipalNameElement</serializedValue>
         </property>
         <property path="/identity/userPrincipalName/value" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+
+          <serializedValue>TAKEMIKAZUCHI\jesus</serializedValue>
           <serializedValue>LAPTOP-7E1OAAS2\Armando Reyes</serializedValue>
+
         </property>
         <property path="/identity/servicePrincipalName" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.ServicePrincipalNameElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.ServicePrincipalNameElement</serializedValue>
@@ -324,10 +328,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="NetTcpBinding_IUserManager" contract="GimnacioService.IUserManager" bindingType="netTcpBinding" address="net.tcp://localhost:8083/CrazyEightsServicio" bindingConfiguration="NetTcpBinding_IUserManager">
+    <endpoint name="NetTcpBinding_IUserManager" contract="GimnacioService.IUserManager" bindingType="netTcpBinding" address="net.tcp://localhost:8083/GimnacioServicio" bindingConfiguration="NetTcpBinding_IUserManager">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://localhost:8083/CrazyEightsServicio</serializedValue>
+          <serializedValue>net.tcp://localhost:8083/GimnacioServicio</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -354,7 +358,11 @@
           <serializedValue>System.ServiceModel.Configuration.UserPrincipalNameElement</serializedValue>
         </property>
         <property path="/identity/userPrincipalName/value" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+
+          <serializedValue>TAKEMIKAZUCHI\jesus</serializedValue>
+
           <serializedValue>LAPTOP-7E1OAAS2\Armando Reyes</serializedValue>
+
         </property>
         <property path="/identity/servicePrincipalName" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.ServicePrincipalNameElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.ServicePrincipalNameElement</serializedValue>
