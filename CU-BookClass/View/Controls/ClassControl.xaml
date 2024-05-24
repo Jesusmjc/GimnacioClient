@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="GimnacioClient.CU_BookClass.View.Controls.ClassControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GimnacioClient.CU_BookClass.View.Controls"
+             mc:Ignorable="d" d:Width="600">
+    <Border Background="White" CornerRadius="10" Margin="0 0 0 10">
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Clase: " FontFamily="Yu Gothic" FontWeight="SemiBold" FontSize="14"/>
+                    <TextBlock Name="Title_TextBlock" Text="Titulo de una clase" FontFamily="Yu Gothic" FontWeight="SemiBold" FontSize="14"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Cupo: " FontSize="12" FontFamily="Yu Gothic"/>
+                    <TextBlock Name="Capacity_TextBlock" Text="00" FontSize="12" FontFamily="Yu Gothic"/>
+                    <TextBlock Text=" personas" FontSize="12" FontFamily="Yu Gothic"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center" Grid.Column="1" Margin="20 0 0 0">
+                <TextBlock Text="Fecha" FontFamily="Yu Gothic" FontWeight="SemiBold" FontSize="12"/>
+                <TextBlock Name="Date_TextBlock" Text="10-02-2024" FontSize="10" FontFamily="Yu Gothic"/>
+            </StackPanel>
+
+            <Button Grid.Column="2" Width="150" Content="Reservar" Height="40" HorizontalAlignment="Right" Click="Book_Button_Click"/>
+
+        </Grid>
+    </Border>
+</UserControl>

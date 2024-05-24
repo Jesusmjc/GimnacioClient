@@ -76,12 +76,41 @@
   </wsdl:message>
   <wsdl:message name="IClassManager_ValidateDateIsAvailable_OutputMessage">
     <wsdl:part name="parameters" element="tns:ValidateDateIsAvailableResponse" />
+  <wsdl:message name="IClassManager_GetClasses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClasses" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetClasses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClassesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetBookClassesByMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookClassesByMember" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetBookClassesByMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookClassesByMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetTotalAssistantsToClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalAssistantsToClass" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetTotalAssistantsToClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalAssistantsToClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_BookClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookClass" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_BookClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookClassResponse" />
   </wsdl:message>
   <wsdl:message name="IUserManager_GetUser_InputMessage">
     <wsdl:part name="parameters" element="tns:GetUser" />
   </wsdl:message>
   <wsdl:message name="IUserManager_GetUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
   </wsdl:message>
   <wsdl:portType name="IClassManager">
     <wsdl:operation name="RegisterClass">
@@ -91,12 +120,31 @@
     <wsdl:operation name="ValidateDateIsAvailable">
       <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/ValidateDateIsAvailable" message="tns:IClassManager_ValidateDateIsAvailable_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/ValidateDateIsAvailableResponse" message="tns:IClassManager_ValidateDateIsAvailable_OutputMessage" />
+    <wsdl:operation name="GetClasses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/GetClasses" message="tns:IClassManager_GetClasses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/GetClassesResponse" message="tns:IClassManager_GetClasses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookClassesByMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/GetBookClassesByMember" message="tns:IClassManager_GetBookClassesByMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/GetBookClassesByMemberResponse" message="tns:IClassManager_GetBookClassesByMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalAssistantsToClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/GetTotalAssistantsToClass" message="tns:IClassManager_GetTotalAssistantsToClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/GetTotalAssistantsToClassResponse" message="tns:IClassManager_GetTotalAssistantsToClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/BookClass" message="tns:IClassManager_BookClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/BookClassResponse" message="tns:IClassManager_BookClass_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="IUserManager">
     <wsdl:operation name="GetUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/GetUser" message="tns:IUserManager_GetUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/GetUserResponse" message="tns:IUserManager_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/GetUserById" message="tns:IUserManager_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/GetUserByIdResponse" message="tns:IUserManager_GetUserById_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IClassManager" type="tns:IClassManager">
@@ -113,6 +161,36 @@
     </wsdl:operation>
     <wsdl:operation name="ValidateDateIsAvailable">
       <soap12:operation soapAction="http://tempuri.org/IClassManager/ValidateDateIsAvailable" style="document" />
+    <wsdl:operation name="GetClasses">
+      <soap12:operation soapAction="http://tempuri.org/IClassManager/GetClasses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookClassesByMember">
+      <soap12:operation soapAction="http://tempuri.org/IClassManager/GetBookClassesByMember" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalAssistantsToClass">
+      <soap12:operation soapAction="http://tempuri.org/IClassManager/GetTotalAssistantsToClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookClass">
+      <soap12:operation soapAction="http://tempuri.org/IClassManager/BookClass" style="document" />
+
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -133,6 +211,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/GetUserById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="GimnacioService">
     <wsdl:port name="NetTcpBinding_IClassManager" binding="tns:NetTcpBinding_IClassManager">
@@ -141,6 +228,7 @@
         <wsa10:Address>net.tcp://localhost:8083/GimnacioServicio</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>TAKEMIKAZUCHI\jesus</Upn>
+          <Upn>LAPTOP-7E1OAAS2\Armando Reyes</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
@@ -150,6 +238,7 @@
         <wsa10:Address>net.tcp://localhost:8083/GimnacioServicio</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>TAKEMIKAZUCHI\jesus</Upn>
+          <Upn>LAPTOP-7E1OAAS2\Armando Reyes</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>

@@ -15,6 +15,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+<
   <xs:element name="ValidateDateIsAvailable">
     <xs:complexType>
       <xs:sequence>
@@ -26,6 +27,60 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="ValidateDateIsAvailableResult" type="xs:int" />
+
+  <xs:element name="GetClasses">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClassesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GimnacioServices" minOccurs="0" name="GetClassesResult" nillable="true" type="q2:ArrayOfClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBookClassesByMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdMember" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBookClassesByMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GimnacioServices" minOccurs="0" name="GetBookClassesByMemberResult" nillable="true" type="q3:ArrayOfClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalAssistantsToClass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdClass" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalAssistantsToClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTotalAssistantsToClassResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookClass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="classId" type="xs:int" />
+        <xs:element minOccurs="0" name="idMember" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookClassResult" type="xs:int" />
+
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -40,7 +95,21 @@
   <xs:element name="GetUserResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GimnacioServices" minOccurs="0" name="GetUserResult" nillable="true" type="q2:User" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GimnacioServices" minOccurs="0" name="GetUserResult" nillable="true" type="q4:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GimnacioServices" minOccurs="0" name="GetUserByIdResult" nillable="true" type="q5:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
