@@ -337,7 +337,6 @@ namespace GimnacioClient.GimnacioService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClassManager/RegisterClass", ReplyAction="http://tempuri.org/IClassManager/RegisterClassResponse")]
         System.Threading.Tasks.Task<int> RegisterClassAsync(GimnacioClient.GimnacioService.Class newClass);
         
-
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClassManager/ValidateDateIsAvailable", ReplyAction="http://tempuri.org/IClassManager/ValidateDateIsAvailableResponse")]
         int ValidateDateIsAvailable(System.DateTime classDateTime);
         
@@ -404,14 +403,14 @@ namespace GimnacioClient.GimnacioService {
             return base.Channel.RegisterClassAsync(newClass);
         }
         
-
         public int ValidateDateIsAvailable(System.DateTime classDateTime) {
             return base.Channel.ValidateDateIsAvailable(classDateTime);
         }
         
         public System.Threading.Tasks.Task<int> ValidateDateIsAvailableAsync(System.DateTime classDateTime) {
             return base.Channel.ValidateDateIsAvailableAsync(classDateTime);
-
+        }
+        
         public GimnacioClient.GimnacioService.Class[] GetClasses() {
             return base.Channel.GetClasses();
         }
@@ -442,7 +441,6 @@ namespace GimnacioClient.GimnacioService {
         
         public System.Threading.Tasks.Task<int> BookClassAsync(int classId, int idMember) {
             return base.Channel.BookClassAsync(classId, idMember);
-
         }
     }
     

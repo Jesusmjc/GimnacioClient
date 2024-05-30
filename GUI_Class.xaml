@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GimnacioClient"
         mc:Ignorable="d"
-        Title="Registrar Clase" Height="800" Width="1200">
+        Title="Registrar Clase" Height="800" Width="1200" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button x:Name="btnRegister" Content="Registrar" HorizontalAlignment="Right" Margin="0,0,260,40" Width="180" Click="Btn_Register_Class_Click" Height="50" VerticalAlignment="Bottom" FontSize="20"/>
         <TextBlock Height="53" Margin="0,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center"><Run Language="es-mx" Text="Registro de nueva Clase"/></TextBlock>

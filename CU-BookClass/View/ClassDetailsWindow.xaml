@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GimnacioClient.CU_BookClass.View"
         mc:Ignorable="d"
-        Title="ClassDetailsWindow" Height="450" Width="500">
+        Title="ClassDetailsWindow" Height="450" Width="500" WindowStartupLocation="CenterScreen">
     <Grid Margin="15">
         <StackPanel HorizontalAlignment="Center">
             <TextBlock Text="Clase" FontSize="20" FontWeight="Black" FontFamily="Yu Gothic" HorizontalAlignment="Center"/>

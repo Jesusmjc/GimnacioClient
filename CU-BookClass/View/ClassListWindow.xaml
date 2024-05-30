@@ -7,7 +7,8 @@
         xmlns:Controls="clr-namespace:GimnacioClient.CU_BookClass.View.Controls"
         mc:Ignorable="d"
         Title="ClassListWindow" Height="550" Width="900"
-        Background="#E1E1E1">
+        Background="#E1E1E1"
+        WindowStartupLocation="CenterScreen">
     <Grid Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -21,6 +22,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
+            <Button x:Name="Btn_Regresar" Content="Regresar" Margin="0 0 15 0" Click="Btn_Regresar_Click"/>
             <TextBlock Text="Clases disponibles" Grid.Column="1" FontSize="18" FontWeight="SemiBold"/>
             <Border Background="#FF9C4700" Height="2" VerticalAlignment="Center" Grid.Column="2" Margin="15 0 0 0" CornerRadius="2"/>
         </Grid>

@@ -50,5 +50,10 @@ namespace GimnacioClient.CU_BookClass.View
                 classClient.Close(); 
             }
         }
+
+        private void Btn_Regresar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

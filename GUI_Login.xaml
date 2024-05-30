@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GimnacioClient"
         mc:Ignorable="d"
-        Title="Inicio de Sesión" Height="450" Width="800">
+        Title="Inicio de Sesión" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBox x:Name="tbxEmail" HorizontalAlignment="Left" Margin="335,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="25" FontSize="16"/>
         <Label Content="Correo Electrónico:" HorizontalAlignment="Left" Margin="172,248,0,0" VerticalAlignment="Top" FontSize="16"/>

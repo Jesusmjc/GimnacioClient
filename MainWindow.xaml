@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GimnacioClient"
         mc:Ignorable="d"
-        Title="Menú Principal" Height="800" Width="1200">
+        Title="Menú Principal" Height="550" Width="900"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <Image Margin="487,100,487,0" Source="/Resources/Image1.png" Stretch="Fill" Height="217" VerticalAlignment="Top"/>
+        <Image Source="/Resources/Image1.png" Height="250" VerticalAlignment="Top" HorizontalAlignment="Center"/>
         <Button x:Name="btnRegisterClass" Content="Registrar Clase" HorizontalAlignment="Center" Margin="0,411,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Visibility="Hidden" Click="Btn_Register_Class_Click"/>
         <Button x:Name="btnReserveClass" Content="Reservar Clase" HorizontalAlignment="Center" Margin="0,411,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Visibility="Hidden" Click="Btn_Book_Class_Click"/>
         <Button x:Name="btnRegisterPayment" Content="Registrar Pago" HorizontalAlignment="Center" Margin="0,411,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Visibility="Hidden"/>

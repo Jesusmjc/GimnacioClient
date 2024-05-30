@@ -15,7 +15,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-<
   <xs:element name="ValidateDateIsAvailable">
     <xs:complexType>
       <xs:sequence>
@@ -27,7 +26,9 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="ValidateDateIsAvailableResult" type="xs:int" />
-
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetClasses">
     <xs:complexType>
       <xs:sequence />
@@ -80,7 +81,6 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="BookClassResult" type="xs:int" />
-
       </xs:sequence>
     </xs:complexType>
   </xs:element>
