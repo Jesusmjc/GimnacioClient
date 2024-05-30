@@ -396,3 +396,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+App.config
+Connected Services/GimnacioService/configuration.svcinfo
+Connected Services/GimnacioService/configuration91.svcinfo
+Connected Services/GimnacioService/GimnacioService.wsdl
+Connected Services/GimnacioService/item1.xsd
+Connected Services/GimnacioService/Reference.cs

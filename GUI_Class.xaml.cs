@@ -82,7 +82,7 @@ namespace GimnacioClient
                 isCapacityValid = true;
             }
             
-            if (tbComments.Text != null)
+            if (!string.IsNullOrEmpty(tbComments.Text.ToString()))
             {
                 comments = tbComments.Text.ToString();
                 isCommentsValid = true;

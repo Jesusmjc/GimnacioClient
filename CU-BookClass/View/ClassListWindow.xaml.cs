@@ -53,7 +53,9 @@ namespace GimnacioClient.CU_BookClass.View
 
         private void Btn_Regresar_Click(object sender, RoutedEventArgs e)
         {
-
+            Window mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
     }
 }
