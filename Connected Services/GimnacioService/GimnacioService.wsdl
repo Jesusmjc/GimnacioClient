@@ -76,6 +76,7 @@
   </wsdl:message>
   <wsdl:message name="IClassManager_ValidateDateIsAvailable_OutputMessage">
     <wsdl:part name="parameters" element="tns:ValidateDateIsAvailableResponse" />
+  </wsdl:message>
   <wsdl:message name="IClassManager_GetClasses_InputMessage">
     <wsdl:part name="parameters" element="tns:GetClasses" />
   </wsdl:message>
@@ -120,6 +121,7 @@
     <wsdl:operation name="ValidateDateIsAvailable">
       <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/ValidateDateIsAvailable" message="tns:IClassManager_ValidateDateIsAvailable_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/ValidateDateIsAvailableResponse" message="tns:IClassManager_ValidateDateIsAvailable_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetClasses">
       <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/GetClasses" message="tns:IClassManager_GetClasses_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/GetClassesResponse" message="tns:IClassManager_GetClasses_OutputMessage" />
@@ -161,6 +163,13 @@
     </wsdl:operation>
     <wsdl:operation name="ValidateDateIsAvailable">
       <soap12:operation soapAction="http://tempuri.org/IClassManager/ValidateDateIsAvailable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetClasses">
       <soap12:operation soapAction="http://tempuri.org/IClassManager/GetClasses" style="document" />
       <wsdl:input>
@@ -190,7 +199,6 @@
     </wsdl:operation>
     <wsdl:operation name="BookClass">
       <soap12:operation soapAction="http://tempuri.org/IClassManager/BookClass" style="document" />
-
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -228,7 +236,6 @@
         <wsa10:Address>net.tcp://localhost:8083/GimnacioServicio</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>TAKEMIKAZUCHI\jesus</Upn>
-          <Upn>LAPTOP-7E1OAAS2\Armando Reyes</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
@@ -238,7 +245,6 @@
         <wsa10:Address>net.tcp://localhost:8083/GimnacioServicio</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>TAKEMIKAZUCHI\jesus</Upn>
-          <Upn>LAPTOP-7E1OAAS2\Armando Reyes</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>

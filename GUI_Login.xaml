@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="Inicio de Sesión" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="tbxEmail" HorizontalAlignment="Left" Margin="335,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="25" FontSize="16"/>
+        <TextBox x:Name="tbxEmail" HorizontalAlignment="Left" Margin="335,252,0,0" TextWrapping="Wrap" MaxLength="50" VerticalAlignment="Top" Width="250" Height="25" FontSize="16"/>
         <Label Content="Correo Electrónico:" HorizontalAlignment="Left" Margin="172,248,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="222,307,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <PasswordBox x:Name="pwbPassword" HorizontalAlignment="Left" Margin="335,310,0,0" VerticalAlignment="Top" Width="250" Height="25" FontSize="16"/>
+        <PasswordBox x:Name="pwbPassword" HorizontalAlignment="Left" Margin="335,310,0,0" MaxLength="16" VerticalAlignment="Top" Width="250" Height="25" FontSize="16"/>
         <Button Content="Iniciar Sesión" Margin="0,0,40,20" FontSize="16" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="125" Click="Button_Login_Click"/>
         <Image Margin="312,38,312,217" Source="/Resources/Image1.png" Stretch="Fill"/>
         

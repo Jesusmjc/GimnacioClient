@@ -19,7 +19,7 @@
         <Label Content="Cupo máximo:" HorizontalAlignment="Left" Margin="285,422,0,0" VerticalAlignment="Top" Height="40" Width="136" FontSize="20"/>
         <ComboBox x:Name="cbCapacity" HorizontalAlignment="Left" Margin="468,422,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20"/>
         <Label Content="Comentarios:" HorizontalAlignment="Left" Margin="293,510,0,0" VerticalAlignment="Top" Height="40" Width="132" FontSize="20"/>
-        <TextBox x:Name="tbComments" HorizontalAlignment="Left" Margin="468,510,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="80" FontSize="20"/>
+        <TextBox x:Name="tbComments" HorizontalAlignment="Left" Margin="468,510,0,0" TextWrapping="Wrap" MaxLength="200" VerticalAlignment="Top" Width="400" Height="80" FontSize="20"/>
         <Label x:Name="lbInvalidDate" Content="Por favor seleccione una fecha válida. (Cualquier día después de hoy.)" HorizontalAlignment="Left" Margin="468,224,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="16" Visibility="Hidden"/>
         <Label x:Name="lbEmptyFields" Content="Por favor llene todos los campos." HorizontalAlignment="Left" Margin="468,624,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="16" Visibility="Hidden"/>
 
