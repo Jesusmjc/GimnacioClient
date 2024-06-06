@@ -31,5 +31,15 @@ namespace GimnacioClient
                 return instance;
             }
         }
+
+        public void LogOut()
+        {
+            lock (lockObject)
+            {
+                instance = null;
+                UserId = default(int);
+                UserType = default(string);
+            }
+        }
     }
 }

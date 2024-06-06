@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
+using System.ServiceModel.Description;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,6 +22,8 @@ namespace GimnacioClient
     /// </summary>
     public partial class GUI_Class : Window
     {
+        Dictionary<int, string> trainersDictionary = new Dictionary<int, string>();
+
         public GUI_Class()
         {
             InitializeComponent();
@@ -29,6 +32,20 @@ namespace GimnacioClient
 
         private void LoadComboBoxes()
         {
+            GimnacioService2.ClassManagerClient client = new GimnacioService2.ClassManagerClient();
+
+            List<string> trainerNames = new List<string>();
+            var trainersFromDB = client.GetTrainers();
+
+            foreach (var user in trainersFromDB)
+            {
+                string trainerName = user.Name + " " + user.MiddleName + " " + user.LastName;
+                trainersDictionary[user.UserId] = trainerName;
+
+                trainerNames.Add(trainerName);
+            }
+            cbTrainer.ItemsSource = trainerNames;
+
             List<TimeSpan> timesList = new List<TimeSpan>();
             for (int hour = 10; hour < 21; hour++)
             {
@@ -54,15 +71,23 @@ namespace GimnacioClient
 
         private bool ValidateFields()
         {
+            bool isTrainerValid = false;
             bool isTimeValid = false;
             bool isClassTypeValid = false;
             bool isCapacityValid = false;
             bool isCommentsValid = false;
 
+            string trainerName = "";
             TimeSpan time = new TimeSpan();
             string classType = "";
             int capacity = 0;
             string comments = "";
+
+            if (cbTrainer.SelectedItem != null)
+            {
+                trainerName = cbTrainer.SelectedItem.ToString();
+                isTrainerValid = true;
+            }
 
             if (cbTime.SelectedItem != null)
             {
@@ -89,7 +114,7 @@ namespace GimnacioClient
             }
             
 
-            if (time != null && !string.IsNullOrEmpty(classType) && capacity >= 10 && !string.IsNullOrEmpty(comments))
+            if (!string.IsNullOrEmpty(trainerName) && time != null && !string.IsNullOrEmpty(classType) && capacity >= 10 && !string.IsNullOrEmpty(comments))
             {
                 lbEmptyFields.Visibility = Visibility.Hidden;
             }
@@ -98,7 +123,7 @@ namespace GimnacioClient
                 lbEmptyFields.Visibility = Visibility.Visible;
             }
 
-            return isTimeValid && isClassTypeValid && isCapacityValid && isCommentsValid && ValidateDatePicker();
+            return isTrainerValid && isTimeValid && isClassTypeValid && isCapacityValid && isCommentsValid && ValidateDatePicker();
         }
 
         private bool ValidateDatePicker()
@@ -173,7 +198,7 @@ namespace GimnacioClient
                         Type = cbClassType.SelectedItem.ToString(),
                         Capacity = (int)cbCapacity.SelectedItem,
                         Comments = tbComments.Text.ToString(),
-                        TrainerId = UserSingleton.Instance.UserId
+                        TrainerId = trainersDictionary.FirstOrDefault(x => x.Value == cbTrainer.SelectedItem.ToString()).Key,
                     };
 
                     GimnacioService.ClassManagerClient client = new GimnacioService.ClassManagerClient();

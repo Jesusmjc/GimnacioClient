@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="GimnacioService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IClassManager_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_IUserManager_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8082/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8082/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8082/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GimnacioServices" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IClassManager_RegisterClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterClass" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_RegisterClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_ValidateDateIsAvailable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDateIsAvailable" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_ValidateDateIsAvailable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDateIsAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetTrainers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainers" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetTrainers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetClasses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClasses" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetClasses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClassesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetBookClassesByMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookClassesByMember" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetBookClassesByMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookClassesByMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetTotalAssistantsToClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalAssistantsToClass" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_GetTotalAssistantsToClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalAssistantsToClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_BookClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookClass" />
+  </wsdl:message>
+  <wsdl:message name="IClassManager_BookClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IClassManager">
+    <wsdl:operation name="RegisterClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/RegisterClass" message="tns:IClassManager_RegisterClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/RegisterClassResponse" message="tns:IClassManager_RegisterClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDateIsAvailable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/ValidateDateIsAvailable" message="tns:IClassManager_ValidateDateIsAvailable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/ValidateDateIsAvailableResponse" message="tns:IClassManager_ValidateDateIsAvailable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/GetTrainers" message="tns:IClassManager_GetTrainers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/GetTrainersResponse" message="tns:IClassManager_GetTrainers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClasses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/GetClasses" message="tns:IClassManager_GetClasses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/GetClassesResponse" message="tns:IClassManager_GetClasses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookClassesByMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/GetBookClassesByMember" message="tns:IClassManager_GetBookClassesByMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/GetBookClassesByMemberResponse" message="tns:IClassManager_GetBookClassesByMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalAssistantsToClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/GetTotalAssistantsToClass" message="tns:IClassManager_GetTotalAssistantsToClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/GetTotalAssistantsToClassResponse" message="tns:IClassManager_GetTotalAssistantsToClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassManager/BookClass" message="tns:IClassManager_BookClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassManager/BookClassResponse" message="tns:IClassManager_BookClass_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IUserManager">
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/GetUser" message="tns:IUserManager_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/GetUserResponse" message="tns:IUserManager_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/GetUserById" message="tns:IUserManager_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/GetUserByIdResponse" message="tns:IUserManager_GetUserById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IClassManager" type="tns:IClassManager">
+    <wsp:PolicyReference URI="#NetTcpBinding_IClassManager_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="RegisterClass">
+      <soap12:operation soapAction="http://tempuri.org/IClassManager/RegisterClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDateIsAvailable">
+      <soap12:operation soapAction="http://tempuri.org/IClassManager/ValidateDateIsAvailable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainers">
+      <soap12:operation soapAction="http://tempuri.org/IClassManager/GetTrainers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClasses">
+      <soap12:operation soapAction="http://tempuri.org/IClassManager/GetClasses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookClassesByMember">
+      <soap12:operation soapAction="http://tempuri.org/IClassManager/GetBookClassesByMember" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalAssistantsToClass">
+      <soap12:operation soapAction="http://tempuri.org/IClassManager/GetTotalAssistantsToClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookClass">
+      <soap12:operation soapAction="http://tempuri.org/IClassManager/BookClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_IUserManager" type="tns:IUserManager">
+    <wsp:PolicyReference URI="#NetTcpBinding_IUserManager_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetUser">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/GetUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/GetUserById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GimnacioService">
+    <wsdl:port name="NetTcpBinding_IClassManager" binding="tns:NetTcpBinding_IClassManager">
+      <soap12:address location="net.tcp://localhost:8083/GimnacioServicio" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8083/GimnacioServicio</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>TAKEMIKAZUCHI\jesus</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IUserManager" binding="tns:NetTcpBinding_IUserManager">
+      <soap12:address location="net.tcp://localhost:8083/GimnacioServicio" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8083/GimnacioServicio</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>TAKEMIKAZUCHI\jesus</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

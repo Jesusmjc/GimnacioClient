@@ -10,18 +10,19 @@
         <Button x:Name="btnRegister" Content="Registrar" HorizontalAlignment="Right" Margin="0,0,260,40" Width="180" Click="Btn_Register_Class_Click" Height="50" VerticalAlignment="Bottom" FontSize="20"/>
         <TextBlock Height="53" Margin="0,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center"><Run Language="es-mx" Text="Registro de nueva Clase"/></TextBlock>
         <Button x:Name="btnCancel" Content="Cancelar" HorizontalAlignment="Right" Margin="0,0,60,40" VerticalAlignment="Bottom" Height="50" Width="180" Click="Btn_Cancel_Click" FontSize="20"/>
-        <Label Content="Fecha:" HorizontalAlignment="Left" Margin="357,184,0,0" VerticalAlignment="Top" Height="40" Width="64" FontSize="20"/>
-        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="468,184,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20"/>
-        <Label Content="Hora:" HorizontalAlignment="Left" Margin="363,263,0,0" VerticalAlignment="Top" Height="40" Width="100" FontSize="20"/>
-        <ComboBox x:Name="cbTime" HorizontalAlignment="Left" Margin="468,263,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20"/>
-        <Label Content="Tipo de Clase:" HorizontalAlignment="Left" Margin="289,343,0,0" VerticalAlignment="Top" Height="40" Width="136" FontSize="20"/>
-        <ComboBox x:Name="cbClassType" HorizontalAlignment="Left" Margin="468,343,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20"/>
-        <Label Content="Cupo máximo:" HorizontalAlignment="Left" Margin="285,422,0,0" VerticalAlignment="Top" Height="40" Width="136" FontSize="20"/>
-        <ComboBox x:Name="cbCapacity" HorizontalAlignment="Left" Margin="468,422,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20"/>
-        <Label Content="Comentarios:" HorizontalAlignment="Left" Margin="293,510,0,0" VerticalAlignment="Top" Height="40" Width="132" FontSize="20"/>
-        <TextBox x:Name="tbComments" HorizontalAlignment="Left" Margin="468,510,0,0" TextWrapping="Wrap" MaxLength="200" VerticalAlignment="Top" Width="400" Height="80" FontSize="20"/>
+        <Label Content="Fecha:" HorizontalAlignment="Left" Margin="357,213,0,0" VerticalAlignment="Top" Height="40" Width="64" FontSize="20"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="468,213,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20"/>
+        <Label Content="Hora:" HorizontalAlignment="Left" Margin="363,292,0,0" VerticalAlignment="Top" Height="40" Width="100" FontSize="20"/>
+        <ComboBox x:Name="cbTime" HorizontalAlignment="Left" Margin="468,292,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20"/>
+        <Label Content="Tipo de Clase:" HorizontalAlignment="Left" Margin="289,0,0,0" VerticalAlignment="Center" Height="40" Width="136" FontSize="20"/>
+        <ComboBox x:Name="cbClassType" HorizontalAlignment="Left" Margin="468,0,0,0" VerticalAlignment="Center" Width="400" Height="40" FontSize="20"/>
+        <Label Content="Cupo máximo:" HorizontalAlignment="Left" Margin="285,451,0,0" VerticalAlignment="Top" Height="40" Width="136" FontSize="20"/>
+        <ComboBox x:Name="cbCapacity" HorizontalAlignment="Left" Margin="468,451,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20"/>
+        <Label Content="Comentarios:" HorizontalAlignment="Left" Margin="293,539,0,0" VerticalAlignment="Top" Height="40" Width="132" FontSize="20"/>
+        <TextBox x:Name="tbComments" HorizontalAlignment="Left" Margin="468,539,0,0" TextWrapping="Wrap" MaxLength="200" VerticalAlignment="Top" Width="400" Height="80" FontSize="20"/>
         <Label x:Name="lbInvalidDate" Content="Por favor seleccione una fecha válida. (Cualquier día después de hoy.)" HorizontalAlignment="Left" Margin="468,224,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="16" Visibility="Hidden"/>
         <Label x:Name="lbEmptyFields" Content="Por favor llene todos los campos." HorizontalAlignment="Left" Margin="468,624,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="16" Visibility="Hidden"/>
-
+        <Label Content="Entrenador:" HorizontalAlignment="Left" Margin="310,142,0,0" VerticalAlignment="Top" Height="40" Width="115" FontSize="20"/>
+        <ComboBox x:Name="cbTrainer" HorizontalAlignment="Left" Margin="468,142,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20"/>
     </Grid>
 </Window>

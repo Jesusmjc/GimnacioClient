@@ -9,8 +9,8 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Image Source="/Resources/Image1.png" Height="250" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-        <Button x:Name="btnRegisterClass" Content="Registrar Clase" HorizontalAlignment="Center" Margin="0,411,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Visibility="Hidden" Click="Btn_Register_Class_Click"/>
-        <Button x:Name="btnReserveClass" Content="Reservar Clase" HorizontalAlignment="Center" Margin="0,411,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Visibility="Hidden" Click="Btn_Book_Class_Click"/>
-        <Button x:Name="btnRegisterPayment" Content="Registrar Pago" HorizontalAlignment="Center" Margin="0,411,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Visibility="Hidden"/>
+        <Button x:Name="btnRegisterClass" Content="Registrar Clase" HorizontalAlignment="Center" Margin="0,366,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Click="Btn_Register_Class_Click" Visibility="Hidden"/>
+        <Button x:Name="btnReserveClass" Content="Reservar Clase" HorizontalAlignment="Center" Margin="0,366,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Click="Btn_Book_Class_Click" Visibility="Hidden"/>
+        <Button x:Name="btnLogOut" Content="Cerrar Sesión" HorizontalAlignment="Center" Margin="0,428,0,0" VerticalAlignment="Top" Width="400" Height="40" FontSize="20" Click="Btn_Log_Out_Click" Background="#FFDC6161" Foreground="White"/>
     </Grid>
 </Window>

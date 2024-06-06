@@ -32,11 +32,10 @@ namespace GimnacioClient
             switch (UserSingleton.Instance.UserType)
             {
                 case "Admin":
-                    btnRegisterPayment.Visibility = Visibility.Visible;
+                    btnRegisterClass.Visibility = Visibility.Visible;
                     break;
 
                 case "Entrenador":
-                    btnRegisterClass.Visibility = Visibility.Visible;
                     break;
 
                 case "Miembro":
@@ -57,6 +56,15 @@ namespace GimnacioClient
             Window classWindow = new ClassListWindow();
             classWindow.Show();
             this.Close();
+        }
+
+        private void Btn_Log_Out_Click(object sender, RoutedEventArgs e)
+        {
+            Window loginWindow = new GUI_Login();
+            loginWindow.Show();
+            this.Close();
+
+            UserSingleton.Instance.LogOut();
         }
     }
 }

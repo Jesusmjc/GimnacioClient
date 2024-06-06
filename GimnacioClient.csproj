@@ -57,6 +57,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Connected Services\GimnacioService2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="CU-BookClass\View\ClassDetailsWindow.xaml.cs">
       <DependentUpon>ClassDetailsWindow.xaml</DependentUpon>
     </Compile>
@@ -130,6 +135,22 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Connected Services\GimnacioService2\GimnacioClient.GimnacioService2.Class.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GimnacioService2\GimnacioClient.GimnacioService2.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GimnacioService2\GimnacioService.wsdl" />
+    <None Include="Connected Services\GimnacioService2\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GimnacioService2\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GimnacioService2\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\GimnacioService\GimnacioClient.GimnacioService.Class.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -158,6 +179,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\GimnacioService2\" />
     <WCFMetadataStorage Include="Connected Services\GimnacioService\" />
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +200,20 @@
   <ItemGroup>
     <Resource Include="Resources\Image1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Connected Services\GimnacioService2\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GimnacioService2\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GimnacioService2\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GimnacioService2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
